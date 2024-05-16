@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Payment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background-color: #333333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select {
+            width: calc(50% - 10px);
+            padding: 8px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input:last-child,
+        .form-group select:last-child {
+            margin-right: 0;
+        }
+        .form-group input[type="text"] {
+            width: calc(100% - 10px);
+            margin-right: 0;
+        }
+        .form-group .btn {
+            background-color: #007BFF;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group .btn:hover {
+            background-color: #e0a564;
+        }
+        .sidebar {
+            float: left;
+            width: 150px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #000;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            background-color: #f9f9f9;
+        }
+        .sidebar a:hover {
+            background-color: #e0e0e0;
+        }
+        .form-content {
+            margin-left: 160px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>ONE STOP SOLUTION FOR PAY YOUR BILL & GOVT. SERVICES</h2>
+    </div>
+    <div class="sidebar">
+        <a href="#">Electricity Bill</a>
+        <a href="#">Water Bill</a>
+        <a href="#">Gas Bill</a>
+        <a href="#">Internet Bill</a>
+    </div>
+    <div class="form-content">
+        <form>
+            <div class="form-group">
+                <label for="bill-type">Bill Type</label>
+                <select id="bill-type">
+                    <option value="">Select Bill Type</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <input type="text" id="bill-id" placeholder="Bill ID">
+            </div>
+            <div class="form-group">
+                <input type="text" id="billing-authority" placeholder="Billing Authority">
+                <input type="text" id="month" placeholder="Month">
+            </div>
+            <div class="form-group">
+                <input type="text" id="payee-organization" placeholder="Payee Organization">
+                <button type="button" class="btn">Search</button>
+            </div>
+            <div class="form-group">
+                <input type="text" id="mobile-number" placeholder="Mobile Number 01xxx">
+            </div>
+            <div class="form-group">
+                <input type="text" id="reference-name" placeholder="Your/Reference Name">
+                <input type="text" id="address" placeholder="Enter Address">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Pay Now</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

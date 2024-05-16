@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .header .icon.purple {
+            background-color: #8e44ad;
+        }
+
+        .header .icon.green {
+            background-color: #27ae60;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #8e44ad;
+        }
+
+        .bill-history-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+        }
+
+        .radio-group input {
+            margin-right: 5px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .submit-btn {
+            padding: 10px;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="icon purple"></div>
+            <div class="icon green"></div>
+            <h2>Bill History</h2>
+        </div>
+        <form class="bill-history-form">
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="searchOption" value="receipt" checked>
+                    Receipt Number
+                </label>
+                <label>
+                    <input type="radio" name="searchOption" value="mobile">
+                    Mobile Number
+                </label>
+                <label>
+                    <input type="radio" name="searchOption" value="passport">
+                    Passport Application ID
+                </label>
+            </div>
+            <div class="input-group">
+                <label for="searchInput">Enter Receipt Number</label>
+                <input type="text" id="searchInput" name="searchInput">
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
